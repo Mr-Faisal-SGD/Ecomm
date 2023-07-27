@@ -1,0 +1,22 @@
+{
+  "seller": [
+    {
+      "name": "Faisal",
+      "email": "faisal450fai@gmail.como",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Faisal",
+      "email": "faisal450fai@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "name": "Testing",
+      "email": "faisal450f@gmail.com",
+      "password": "12345",
+      "id": 3
+    }
+  ]
+}
