@@ -9,9 +9,23 @@ import { Seller } from '../model/seller.interface';
   styleUrls: ['./seller-auth.component.css'],
 })
 export class SellerAuthComponent {
-  constructor(private seller: SellerService, private router: Router) {}
+  toggle: boolean = false;
+
+  constructor(private sellerService: SellerService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.sellerService.autoSignIn();
+  }
+
+  onToggle() {
+    this.toggle = !this.toggle;
+  }
 
   signUp(data: Seller): void {
-    this.seller.userSignUp(data);
+    this.sellerService.userSignUp(data);
+  }
+
+  logIn(data: Seller): void {
+    // this.sellerService.userLogIn(data);
   }
 }

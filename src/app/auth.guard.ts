@@ -2,7 +2,6 @@ import { Injectable, inject } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivateFn,
-  Router,
   RouterStateSnapshot,
 } from '@angular/router';
 import { SellerService } from './services/seller.service';
@@ -11,12 +10,15 @@ import { SellerService } from './services/seller.service';
   providedIn: 'root',
 })
 class PermissionsService {
-  constructor(private router: Router, private sellerService: SellerService) {}
+  constructor(private sellerService: SellerService) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
+    if (localStorage.getItem('seller')) {
+      return true;
+    }
     return this.sellerService.isLoggedIn.value;
   }
 }

@@ -1,6 +1,6 @@
 <div class="seller-auth">
-  <div class="signup">
-    <h1>Seller Sign-up</h1>
+  <div class="signup" *ngIf="!toggle">
+    <h1>Seller Signup</h1>
     <form
       #sellerSignUp="ngForm"
       (ngSubmit)="signUp(sellerSignUp.value)"
@@ -28,6 +28,34 @@
         placeholder="Enter Password"
       />
       <button class="form-button">Signup</button>
+      <a (click)="onToggle()">Login to an existing account</a>
+    </form>
+  </div>
+
+
+  <div class="login" *ngIf="toggle">
+    <h1>Seller Login</h1>
+    <form
+      #sellerLogin="ngForm"
+      (ngSubmit)="logIn(sellerLogin.value)"
+      class="common-form"
+    >
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="email"
+        placeholder="Enter Email"
+      />
+      <input
+        class="form-input"
+        type="password"
+        ngModel
+        name="password"
+        placeholder="Enter Password"
+      />
+      <button class="form-button">Login</button>
+      <a (click)="onToggle()">Create a new account</a>
     </form>
   </div>
 </div>

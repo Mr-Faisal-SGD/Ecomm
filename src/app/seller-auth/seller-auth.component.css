@@ -1,6 +1,17 @@
-.signup h1 {
+h1 {
   text-align: center;
   color: blueviolet;
   margin-top: 90px;
   margin-bottom: 40px;
+}
+
+a{
+  margin-top: 20px;
+  cursor: pointer;
+  color: blueviolet;
+  transition: all 0.3s;
+}
+
+a:hover {
+  transform: scale(1.1);
 }

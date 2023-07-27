@@ -19,7 +19,16 @@ export class SellerService {
       })
       .subscribe((response) => {
         this.isLoggedIn.next(true);
+        localStorage.setItem('seller', JSON.stringify(response.body));
         this.router.navigate(['/seller-home']);
       });
   }
+
+  autoSignIn() {
+    if (localStorage.getItem('seller')) {
+      this.isLoggedIn.next(true);
+      this.router.navigate(['/seller-home']);
+    }
+  }
+
 }
