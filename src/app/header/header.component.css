@@ -68,3 +68,8 @@ li {
   cursor: pointer;
   opacity: 0.9;
 }
+
+.title {
+  text-decoration: none;
+  color: blueviolet;
+}

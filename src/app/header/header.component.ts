@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
-        if (localStorage.getItem('seller')) {
+        if (localStorage.getItem('seller') && event.url.includes('seller')) {
           this.router.navigate(['/seller-home']);
           this.menuType = 'seller';
         } else this.menuType = 'buyer';
