@@ -3,21 +3,21 @@
   justify-content: space-between;
 }
 
-.nav > h1 {
+h1 {
   color: blueviolet;
   margin: 0;
   font-size: 44px;
   width: 275px;
 }
 
-.nav > ul {
+ul {
   display: inline-flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav li {
+li {
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 15px;

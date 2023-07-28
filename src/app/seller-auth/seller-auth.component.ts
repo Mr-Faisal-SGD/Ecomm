@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { SellerService } from '../services/seller.service';
-import { Router } from '@angular/router';
 import { Seller } from '../model/seller.interface';
 
 @Component({
@@ -9,9 +8,10 @@ import { Seller } from '../model/seller.interface';
   styleUrls: ['./seller-auth.component.css'],
 })
 export class SellerAuthComponent {
-  toggle: boolean = false;
+  toggle: boolean = true;
+  authError: boolean = false;
 
-  constructor(private sellerService: SellerService, private router: Router) {}
+  constructor(private sellerService: SellerService) {}
 
   ngOnInit(): void {
     this.sellerService.autoSignIn();
@@ -19,6 +19,7 @@ export class SellerAuthComponent {
 
   onToggle() {
     this.toggle = !this.toggle;
+    this.authError = false;
   }
 
   signUp(data: Seller): void {
@@ -26,6 +27,11 @@ export class SellerAuthComponent {
   }
 
   logIn(data: Seller): void {
-    // this.sellerService.userLogIn(data);
+    this.sellerService.userLogIn(data);
+    this.sellerService.isLogingError.subscribe((error) => {
+      if (error) {
+        this.authError = true;
+      }
+    });
   }
 }

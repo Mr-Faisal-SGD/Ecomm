@@ -18,7 +18,7 @@ body {
 
 .form-input {
   height: 50px;
-  margin-bottom: 20px;
+  margin: 10px;
   padding-left: 20px;
   border: 1px solid blueviolet;
   border-radius: 25px;
@@ -32,6 +32,7 @@ body {
 
 .form-button {
   height: 50px;
+  margin: 10px;
   border: 1px solid blueviolet;
   border-radius: 25px;
   background: blueviolet;
@@ -44,5 +45,3 @@ body {
   opacity: 0.9;
   cursor: pointer;
 }
-
-

@@ -32,7 +32,6 @@
     </form>
   </div>
 
-
   <div class="login" *ngIf="toggle">
     <h1>Seller Login</h1>
     <form
@@ -54,6 +53,7 @@
         name="password"
         placeholder="Enter Password"
       />
+      <p *ngIf="authError" class="error">Email or Password is incorrect</p>
       <button class="form-button">Login</button>
       <a (click)="onToggle()">Create a new account</a>
     </form>
