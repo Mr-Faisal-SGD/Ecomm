@@ -1,0 +1,21 @@
+table {
+    text-align: left;
+    color: blueviolet;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid blueviolet;
+    padding: 10px;
+    min-height: 160px;
+}
+
+img {
+    width: 200px;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -56,3 +56,11 @@
     <button class="form-button">Add Product</button>
   </form>
 </div>
+
+<div *ngIf="productMessage" class="backdrop">
+  <div class="confirmation">
+    <h1>Product Added Successfully</h1>
+    <button class="form-button" (click)="onAdd()">Add another product</button>
+    <button class="form-button" (click)="onNavigate()">Go to listings</button>
+  </div>
+</div>

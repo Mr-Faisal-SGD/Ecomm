@@ -36,5 +36,16 @@
       "password": "12345",
       "id": 6
     }
+  ],
+  "products": [
+    {
+      "name": "Apple iPhone 14 Pro",
+      "price": "505,999",
+      "color": "Deep Purple",
+      "category": "Mobile Phone",
+      "image": "https://images.priceoye.pk/apple-iphone-14-pro-pakistan-priceoye-fmnxi-270x270.webp",
+      "description": "",
+      "id": 1
+    }
   ]
 }

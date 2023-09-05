@@ -3,3 +3,24 @@
     min-width: 85%;
     min-height: 50px;
 }
+
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation{
+    width: 50%;
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-button {
+    padding-left: 15px;
+    padding-right: 15px;
+}
