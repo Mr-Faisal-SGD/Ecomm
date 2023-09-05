@@ -72,5 +72,8 @@ li {
 .title {
   text-decoration: none;
   color: blueviolet;
-  
+}
+
+a {
+  cursor: pointer;
 }

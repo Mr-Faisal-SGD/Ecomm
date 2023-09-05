@@ -29,6 +29,12 @@
       "email": "",
       "password": "",
       "id": 5
+    },
+    {
+      "name": "Faisal",
+      "email": "faisal450fai@gmail.com",
+      "password": "12345",
+      "id": 6
     }
   ]
 }
